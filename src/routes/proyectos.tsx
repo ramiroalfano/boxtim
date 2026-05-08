@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import p1 from "@/assets/proyecto-1.jpg";
-import p2 from "@/assets/proyecto-2.jpg";
-import p3 from "@/assets/proyecto-3.jpg";
-import oficina from "@/assets/modulo-oficina.jpg";
-import vivienda from "@/assets/modulo-vivienda.jpg";
-import equipo from "@/assets/equipo.jpg";
+import p1 from "@/assets/box/p1.jpg";
+import boedo from "@/assets/box/boedocamp.png";
+import level from "@/assets/box/level.png";
+import lrc from "@/assets/box/lrcgym.jpeg";
+import bodega from "@/assets/box/expandible.jpeg";
+import cabana from "@/assets/box/cabana.jpeg";
 
 export const Route = createFileRoute("/proyectos")({
   head: () => ({

@@ -1,10 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Zap, Leaf, ShieldCheck } from "lucide-react";
-import hero from "@/assets/hero.jpg";
-import oficina from "@/assets/modulo-oficina.jpg";
-import vivienda from "@/assets/modulo-vivienda.jpg";
-import sanitario from "@/assets/modulo-sanitario.jpg";
-import equipo from "@/assets/equipo.jpg";
+import hero from "@/assets/box/hero.jpg";
+import oficina from "@/assets/box/oficina.png";
+import vivienda from "@/assets/box/vivienda.png";
+import sanitario from "@/assets/box/sanitario.png";
+import equipo from "@/assets/box/hero.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({

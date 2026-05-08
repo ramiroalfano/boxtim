@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import equipo from "@/assets/equipo.jpg";
+import equipo from "@/assets/box/hero.jpg";
 import { Award, Users, Wrench, Globe } from "lucide-react";
 
 export const Route = createFileRoute("/nosotros")({
