@@ -1,6 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
-import { modulos } from "@/data/modulos";
+import { modulos, type Modulo } from "@/data/modulos";
 
 export const Route = createFileRoute("/modulos/$slug")({
   component: ModuloDetail,
@@ -26,7 +26,7 @@ export const Route = createFileRoute("/modulos/$slug")({
 });
 
 function ModuloDetail() {
-  const m = Route.useLoaderData();
+  const m = Route.useLoaderData() as Modulo;
 
   return (
     <>
