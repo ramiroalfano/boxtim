@@ -1,8 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Check, ArrowRight } from "lucide-react";
-import oficina from "@/assets/modulo-oficina.jpg";
-import vivienda from "@/assets/modulo-vivienda.jpg";
-import sanitario from "@/assets/modulo-sanitario.jpg";
+import oficina from "@/assets/box/oficina.png";
+import vivienda from "@/assets/box/vivienda.png";
+import sanitario from "@/assets/box/sanitario.png";
+import expandible from "@/assets/box/expandible.jpeg";
+import showroom from "@/assets/box/showroom.jpeg";
 
 export const Route = createFileRoute("/modulos")({
   head: () => ({
