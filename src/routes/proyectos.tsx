@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { PageBanner } from "@/components/PageBanner";
 import p1 from "@/assets/box/p1.jpg";
 import boedo from "@/assets/box/boedocamp.png";
 import level from "@/assets/box/level.png";
@@ -28,15 +29,12 @@ const proyectos = [
 function Proyectos() {
   return (
     <>
-      <section className="py-24 px-6 border-b border-border">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-primary font-display uppercase tracking-widest text-sm mb-3">Portfolio</p>
-          <h1 className="font-display text-5xl md:text-7xl">Proyectos realizados.</h1>
-          <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
-            Más de 500 proyectos completados con éxito. Cada uno con su historia.
-          </p>
-        </div>
-      </section>
+      <PageBanner
+        image={p1}
+        eyebrow="Portfolio"
+        title="Proyectos realizados."
+        subtitle="Más de 500 proyectos completados con éxito. Cada uno con su historia."
+      />
 
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">

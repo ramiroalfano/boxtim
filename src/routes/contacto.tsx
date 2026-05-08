@@ -3,6 +3,8 @@ import { useState } from "react";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
+import { PageBanner } from "@/components/PageBanner";
+import bg from "@/assets/box/showroom.jpeg";
 
 export const Route = createFileRoute("/contacto")({
   head: () => ({
@@ -30,15 +32,12 @@ function Contacto() {
   return (
     <>
       <Toaster />
-      <section className="py-24 px-6 border-b border-border">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-primary font-display uppercase tracking-widest text-sm mb-3">Contacto</p>
-          <h1 className="font-display text-5xl md:text-7xl">¿Listo para<br/><span className="text-primary">tu proyecto?</span></h1>
-          <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
-            Contanos qué tenés en mente y te respondemos en menos de 24hs.
-          </p>
-        </div>
-      </section>
+      <PageBanner
+        image={bg}
+        eyebrow="Contacto"
+        title={<>¿Listo para<br /><span className="text-primary">tu proyecto?</span></>}
+        subtitle="Contanos qué tenés en mente y te respondemos en menos de 24hs."
+      />
 
       <section className="py-16 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-[1fr_2fr] gap-12">
