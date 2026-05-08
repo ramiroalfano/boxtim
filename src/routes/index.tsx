@@ -45,14 +45,8 @@ const slides: Slide[] = [
   },
 ];
 
-const modulos = [
-  { img: oficina, title: "Oficinas Modulares", desc: "Espacios de trabajo modernos y funcionales" },
-  { img: vivienda, title: "Viviendas Compactas", desc: "Hogares completos listos para habitar" },
-  { img: sanitario, title: "Módulos Sanitarios", desc: "Soluciones completas para baños y vestuarios" },
-  { img: expandible, title: "Vivienda Expandible", desc: "Diseños modulares que crecen contigo" },
-  { img: showroom, title: "Showroom & Comercio", desc: "Espacios de exhibición premium" },
-  { img: p1, title: "Obradores & Logística", desc: "Soluciones para obras y campamentos" },
-];
+
+
 
 const features = [
   { icon: Zap, title: "Rapidez", desc: "Reducimos hasta un 60% los tiempos de obra tradicionales." },
