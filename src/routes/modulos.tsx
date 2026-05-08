@@ -5,6 +5,8 @@ import vivienda from "@/assets/box/vivienda.png";
 import sanitario from "@/assets/box/sanitario.png";
 import expandible from "@/assets/box/expandible.jpeg";
 import showroom from "@/assets/box/showroom.jpeg";
+import p1 from "@/assets/box/p1.jpg";
+import { PageBanner } from "@/components/PageBanner";
 
 export const Route = createFileRoute("/modulos")({
   head: () => ({
@@ -35,20 +37,35 @@ const items = [
     desc: "Soluciones completas para baños, vestuarios y espacios sanitarios en obra o eventos.",
     features: ["Inodoros y lavatorios", "Ducha con agua caliente", "Ventilación", "Conexión rápida"],
   },
+  {
+    img: expandible,
+    title: "Vivienda Expandible",
+    desc: "Diseños modulares que crecen con tu familia. Sumá módulos cuando los necesites.",
+    features: ["Sistema escalable", "Conexión entre módulos", "Diseño unificado", "Habilitación rápida"],
+  },
+  {
+    img: showroom,
+    title: "Showroom & Comercio",
+    desc: "Espacios de exhibición premium para marcas que buscan destacarse.",
+    features: ["Vidrieras amplias", "Iluminación LED", "Diseño personalizable", "Movilidad total"],
+  },
+  {
+    img: p1,
+    title: "Obradores & Logística",
+    desc: "Módulos resistentes para obras, campamentos y operaciones en campo.",
+    features: ["Alta durabilidad", "Stock inmediato", "Fácil traslado", "Costo eficiente"],
+  },
 ];
 
 function Modulos() {
   return (
     <>
-      <section className="py-24 px-6 border-b border-border">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-primary font-display uppercase tracking-widest text-sm mb-3">Catálogo</p>
-          <h1 className="font-display text-5xl md:text-7xl">Nuestros módulos.</h1>
-          <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
-            Soluciones modulares pensadas para adaptarse a tus necesidades. Cada unidad se entrega lista para usar.
-          </p>
-        </div>
-      </section>
+      <PageBanner
+        image={oficina}
+        eyebrow="Catálogo"
+        title="Nuestros módulos."
+        subtitle="Soluciones modulares pensadas para adaptarse a tus necesidades. Cada unidad se entrega lista para usar."
+      />
 
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto space-y-16">

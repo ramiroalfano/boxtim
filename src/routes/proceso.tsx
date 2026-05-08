@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
+import { PageBanner } from "@/components/PageBanner";
+import bg from "@/assets/box/p1.jpg";
 
 export const Route = createFileRoute("/proceso")({
   head: () => ({
@@ -21,15 +23,12 @@ const pasos = [
 function Proceso() {
   return (
     <>
-      <section className="py-24 px-6 border-b border-border">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-primary font-display uppercase tracking-widest text-sm mb-3">Cómo trabajamos</p>
-          <h1 className="font-display text-5xl md:text-7xl">Nuestro proceso<br/>en 4 pasos.</h1>
-          <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
-            Un método probado que garantiza calidad, transparencia y entrega en tiempo y forma.
-          </p>
-        </div>
-      </section>
+      <PageBanner
+        image={bg}
+        eyebrow="Cómo trabajamos"
+        title={<>Nuestro proceso<br />en 4 pasos.</>}
+        subtitle="Un método probado que garantiza calidad, transparencia y entrega en tiempo y forma."
+      />
 
       <section className="py-20 px-6">
         <div className="max-w-5xl mx-auto space-y-1">
