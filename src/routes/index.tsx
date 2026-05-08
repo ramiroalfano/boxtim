@@ -69,7 +69,7 @@ function Index() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {modulos.map((m) => (
-              <Link to="/modulos" key={m.title} className="group block bg-card border border-border overflow-hidden hover:border-primary transition-all" style={{ boxShadow: "var(--shadow-card)" }}>
+              <Link to="/modulos/$slug" params={{ slug: m.slug }} key={m.slug} className="group block bg-card border border-border overflow-hidden hover:border-primary transition-all" style={{ boxShadow: "var(--shadow-card)" }}>
                 <div className="aspect-[4/3] overflow-hidden">
                   <img src={m.img} alt={m.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                 </div>
@@ -77,7 +77,7 @@ function Index() {
                   <h3 className="font-display text-2xl mb-2">{m.title}</h3>
                   <p className="text-muted-foreground text-sm">{m.desc}</p>
                   <div className="mt-4 inline-flex items-center text-primary text-sm font-medium gap-1 group-hover:gap-3 transition-all">
-                    Conocer más <ArrowRight className="w-4 h-4" />
+                    Ver más <ArrowRight className="w-4 h-4" />
                   </div>
                 </div>
               </Link>
