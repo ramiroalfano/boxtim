@@ -4,12 +4,9 @@ import { HeroCarousel, type Slide } from "@/components/HeroCarousel";
 import { ContactForm } from "@/components/ContactForm";
 import { Toaster } from "@/components/ui/sonner";
 import hero from "@/assets/box/hero.jpg";
-import oficina from "@/assets/box/oficina.png";
-import vivienda from "@/assets/box/vivienda.png";
-import sanitario from "@/assets/box/sanitario.png";
-import expandible from "@/assets/box/expandible.jpeg";
 import showroom from "@/assets/box/showroom.jpeg";
 import p1 from "@/assets/box/p1.jpg";
+import { modulos } from "@/data/modulos";
 
 export const Route = createFileRoute("/")({
   head: () => ({
