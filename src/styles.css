@@ -134,8 +134,19 @@
     border-color: var(--color-border);
   }
 
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .font-display {
+    font-family: 'Archivo Black', 'Inter', sans-serif;
+    letter-spacing: -0.02em;
   }
 }
