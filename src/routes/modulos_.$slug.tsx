@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight, Check, MessageCircle } from "lucide-react";
 import { useState } from "react";
 import { modulos, type Modulo } from "@/data/modulos";
 
-export const Route = createFileRoute("/modulos_/$slug")({
+export const Route = createFileRoute("/modulos/$slug")({
   component: ModuloDetail,
   notFoundComponent: () => (
     <div className="py-32 text-center">
