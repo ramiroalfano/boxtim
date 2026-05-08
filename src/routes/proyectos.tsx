@@ -18,11 +18,11 @@ export const Route = createFileRoute("/proyectos")({
 
 const proyectos = [
   { img: p1, title: "Complejo de Oficinas Corporativas", loc: "Salta, Argentina", area: "400 m²", year: "2024", desc: "Oficinas corporativas con sala de reuniones, baño y laboratorio." },
-  { img: equipo, title: "BoedoCamp", loc: "Mendoza, Argentina", area: "120 m²", year: "2024", desc: "Ampliación y crecimiento del centro deportivo." },
-  { img: p2, title: "Level Gym", loc: "Mendoza, Argentina", area: "250 m²", year: "2023", desc: "Gimnasio modular con instalaciones completas." },
-  { img: oficina, title: "Liceo Rugby Club Gym", loc: "Mendoza, Argentina", area: "80 m²", year: "2023", desc: "Ampliación del gimnasio del club." },
-  { img: vivienda, title: "Bodega Vitivinícola", loc: "Mendoza, Argentina", area: "300 m²", year: "2023", desc: "Espacio modular para producción y degustación." },
-  { img: p3, title: "Cabañas Vallecitos", loc: "Mendoza, Argentina", area: "150 m²", year: "2024", desc: "Cabañas turísticas en alta montaña." },
+  { img: boedo, title: "BoedoCamp", loc: "Mendoza, Argentina", area: "120 m²", year: "2024", desc: "Ampliación y crecimiento del centro deportivo." },
+  { img: level, title: "Level Gym", loc: "Mendoza, Argentina", area: "250 m²", year: "2023", desc: "Gimnasio modular con instalaciones completas." },
+  { img: lrc, title: "Liceo Rugby Club Gym", loc: "Mendoza, Argentina", area: "80 m²", year: "2023", desc: "Ampliación del gimnasio del club." },
+  { img: bodega, title: "Bodega Vitivinícola", loc: "Mendoza, Argentina", area: "300 m²", year: "2023", desc: "Espacio modular para producción y degustación." },
+  { img: cabana, title: "Cabañas Vallecitos", loc: "Mendoza, Argentina", area: "150 m²", year: "2024", desc: "Cabañas turísticas en alta montaña." },
 ];
 
 function Proyectos() {
