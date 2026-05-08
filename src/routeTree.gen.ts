@@ -15,6 +15,7 @@ import { Route as NosotrosRouteImport } from './routes/nosotros'
 import { Route as ModulosRouteImport } from './routes/modulos'
 import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ModulosSlugRouteImport } from './routes/modulos.$slug'
 
 const ProyectosRoute = ProyectosRouteImport.update({
   id: '/proyectos',
@@ -46,31 +47,39 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ModulosSlugRoute = ModulosSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => ModulosRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contacto': typeof ContactoRoute
-  '/modulos': typeof ModulosRoute
+  '/modulos': typeof ModulosRouteWithChildren
   '/nosotros': typeof NosotrosRoute
   '/proceso': typeof ProcesoRoute
   '/proyectos': typeof ProyectosRoute
+  '/modulos/$slug': typeof ModulosSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contacto': typeof ContactoRoute
-  '/modulos': typeof ModulosRoute
+  '/modulos': typeof ModulosRouteWithChildren
   '/nosotros': typeof NosotrosRoute
   '/proceso': typeof ProcesoRoute
   '/proyectos': typeof ProyectosRoute
+  '/modulos/$slug': typeof ModulosSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/contacto': typeof ContactoRoute
-  '/modulos': typeof ModulosRoute
+  '/modulos': typeof ModulosRouteWithChildren
   '/nosotros': typeof NosotrosRoute
   '/proceso': typeof ProcesoRoute
   '/proyectos': typeof ProyectosRoute
+  '/modulos/$slug': typeof ModulosSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -81,8 +90,16 @@ export interface FileRouteTypes {
     | '/nosotros'
     | '/proceso'
     | '/proyectos'
+    | '/modulos/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contacto' | '/modulos' | '/nosotros' | '/proceso' | '/proyectos'
+  to:
+    | '/'
+    | '/contacto'
+    | '/modulos'
+    | '/nosotros'
+    | '/proceso'
+    | '/proyectos'
+    | '/modulos/$slug'
   id:
     | '__root__'
     | '/'
@@ -91,12 +108,13 @@ export interface FileRouteTypes {
     | '/nosotros'
     | '/proceso'
     | '/proyectos'
+    | '/modulos/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContactoRoute: typeof ContactoRoute
-  ModulosRoute: typeof ModulosRoute
+  ModulosRoute: typeof ModulosRouteWithChildren
   NosotrosRoute: typeof NosotrosRoute
   ProcesoRoute: typeof ProcesoRoute
   ProyectosRoute: typeof ProyectosRoute
@@ -146,13 +164,31 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/modulos/$slug': {
+      id: '/modulos/$slug'
+      path: '/$slug'
+      fullPath: '/modulos/$slug'
+      preLoaderRoute: typeof ModulosSlugRouteImport
+      parentRoute: typeof ModulosRoute
+    }
   }
 }
+
+interface ModulosRouteChildren {
+  ModulosSlugRoute: typeof ModulosSlugRoute
+}
+
+const ModulosRouteChildren: ModulosRouteChildren = {
+  ModulosSlugRoute: ModulosSlugRoute,
+}
+
+const ModulosRouteWithChildren =
+  ModulosRoute._addFileChildren(ModulosRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContactoRoute: ContactoRoute,
-  ModulosRoute: ModulosRoute,
+  ModulosRoute: ModulosRouteWithChildren,
   NosotrosRoute: NosotrosRoute,
   ProcesoRoute: ProcesoRoute,
   ProyectosRoute: ProyectosRoute,
