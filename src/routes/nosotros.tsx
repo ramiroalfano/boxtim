@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import equipo from "@/assets/box/hero.jpg";
 import { Award, Users, Wrench, Globe } from "lucide-react";
+import { PageBanner } from "@/components/PageBanner";
 
 export const Route = createFileRoute("/nosotros")({
   head: () => ({
@@ -22,12 +23,11 @@ const valores = [
 function Nosotros() {
   return (
     <>
-      <section className="py-24 px-6 border-b border-border">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-primary font-display uppercase tracking-widest text-sm mb-3">Quiénes somos</p>
-          <h1 className="font-display text-5xl md:text-7xl">Construyendo el futuro,<br/><span className="text-primary">módulo a módulo.</span></h1>
-        </div>
-      </section>
+      <PageBanner
+        image={equipo}
+        eyebrow="Quiénes somos"
+        title={<>Construyendo el futuro,<br /><span className="text-primary">módulo a módulo.</span></>}
+      />
 
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
