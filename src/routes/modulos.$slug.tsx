@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { ArrowLeft, ArrowRight, Check } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, MessageCircle } from "lucide-react";
 import { useState } from "react";
 import { modulos, type Modulo } from "@/data/modulos";
 
