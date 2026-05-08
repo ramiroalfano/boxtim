@@ -4,12 +4,9 @@ import { HeroCarousel, type Slide } from "@/components/HeroCarousel";
 import { ContactForm } from "@/components/ContactForm";
 import { Toaster } from "@/components/ui/sonner";
 import hero from "@/assets/box/hero.jpg";
-import oficina from "@/assets/box/oficina.png";
-import vivienda from "@/assets/box/vivienda.png";
-import sanitario from "@/assets/box/sanitario.png";
-import expandible from "@/assets/box/expandible.jpeg";
 import showroom from "@/assets/box/showroom.jpeg";
 import p1 from "@/assets/box/p1.jpg";
+import { modulos } from "@/data/modulos";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -48,14 +45,8 @@ const slides: Slide[] = [
   },
 ];
 
-const modulos = [
-  { img: oficina, title: "Oficinas Modulares", desc: "Espacios de trabajo modernos y funcionales" },
-  { img: vivienda, title: "Viviendas Compactas", desc: "Hogares completos listos para habitar" },
-  { img: sanitario, title: "Módulos Sanitarios", desc: "Soluciones completas para baños y vestuarios" },
-  { img: expandible, title: "Vivienda Expandible", desc: "Diseños modulares que crecen contigo" },
-  { img: showroom, title: "Showroom & Comercio", desc: "Espacios de exhibición premium" },
-  { img: p1, title: "Obradores & Logística", desc: "Soluciones para obras y campamentos" },
-];
+
+
 
 const features = [
   { icon: Zap, title: "Rapidez", desc: "Reducimos hasta un 60% los tiempos de obra tradicionales." },
@@ -78,7 +69,7 @@ function Index() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {modulos.map((m) => (
-              <Link to="/modulos" key={m.title} className="group block bg-card border border-border overflow-hidden hover:border-primary transition-all" style={{ boxShadow: "var(--shadow-card)" }}>
+              <Link to="/modulos/$slug" params={{ slug: m.slug }} key={m.slug} className="group block bg-card border border-border overflow-hidden hover:border-primary transition-all" style={{ boxShadow: "var(--shadow-card)" }}>
                 <div className="aspect-[4/3] overflow-hidden">
                   <img src={m.img} alt={m.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                 </div>
@@ -86,7 +77,7 @@ function Index() {
                   <h3 className="font-display text-2xl mb-2">{m.title}</h3>
                   <p className="text-muted-foreground text-sm">{m.desc}</p>
                   <div className="mt-4 inline-flex items-center text-primary text-sm font-medium gap-1 group-hover:gap-3 transition-all">
-                    Conocer más <ArrowRight className="w-4 h-4" />
+                    Ver más <ArrowRight className="w-4 h-4" />
                   </div>
                 </div>
               </Link>
