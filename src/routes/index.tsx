@@ -169,7 +169,7 @@ function Index() {
 
       {/* FEATURES */}
       <section className="py-24 px-6 bg-background">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 justify-center">
           {features.map((f) => (
             <div key={f.title} className="border border-border p-8 hover:border-primary transition-colors">
               <f.icon className="w-10 h-10 text-primary mb-4" />
