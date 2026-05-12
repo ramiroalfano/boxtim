@@ -72,7 +72,7 @@ function Index() {
             {modulos.map((m) => (
               <Link to="/modulos/$slug" params={{ slug: m.slug }} key={m.slug} className="group block bg-card border border-border overflow-hidden hover:border-primary transition-all" style={{ boxShadow: "var(--shadow-card)" }}>
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src={m.img} alt={m.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <ModuleImage src={m.img} alt={m.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                 </div>
                 <div className="p-6">
                   <h3 className="font-display text-2xl mb-2">{m.title}</h3>
