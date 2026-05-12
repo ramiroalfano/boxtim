@@ -7,6 +7,7 @@ import expandible from "@/assets/box/expandible.jpeg";
 import showroom from "@/assets/box/showroom.jpeg";
 import p1 from "@/assets/box/p1.jpg";
 import { PageBanner } from "@/components/PageBanner";
+import { ModuleImage } from "@/components/ModuleImage";
 import { modulos } from "@/data/modulos";
 
 export const Route = createFileRoute("/modulos")({
