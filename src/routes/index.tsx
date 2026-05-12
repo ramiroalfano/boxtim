@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Zap, Leaf, ShieldCheck, Mail, Phone, MapPin } from "lucide-react";
 import { HeroCarousel, type Slide } from "@/components/HeroCarousel";
 import { ContactForm } from "@/components/ContactForm";
+import { ModuleImage } from "@/components/ModuleImage";
 import { Toaster } from "@/components/ui/sonner";
 import hero from "@/assets/box/hero.jpg";
 import showroom from "@/assets/box/showroom.jpeg";
