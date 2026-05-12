@@ -81,7 +81,7 @@ function ModuloDetail() {
           </div>
 
           <div className="space-y-6">
-            <img
+            <ModuleImage
               key={model.img}
               src={model.img}
               alt={model.name}
