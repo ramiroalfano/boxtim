@@ -34,7 +34,7 @@ function Modulos() {
         <div className="max-w-7xl mx-auto space-y-16">
           {modulos.map((item, i) => (
             <div key={item.slug} className={`grid md:grid-cols-2 gap-10 items-center ${i % 2 ? "md:[&>*:first-child]:order-2" : ""}`}>
-              <img src={item.img} alt={item.title} loading="lazy" className="w-full aspect-[4/3] object-cover" style={{ boxShadow: "var(--shadow-card)" }} />
+              <ModuleImage src={item.img} alt={item.title} loading="lazy" className="w-full aspect-[4/3] object-cover" style={{ boxShadow: "var(--shadow-card)" }} />
               <div>
                 <div className="text-primary font-display text-sm uppercase tracking-wider mb-2">0{i + 1}</div>
                 <h2 className="font-display text-4xl md:text-5xl mb-4">{item.title}</h2>
