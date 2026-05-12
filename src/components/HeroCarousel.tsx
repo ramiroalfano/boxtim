@@ -59,16 +59,16 @@ export function HeroCarousel({ slides, intervalMs = 6000 }: { slides: Slide[]; i
       <button
         onClick={prev}
         aria-label="Anterior"
-        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-primary text-white p-3 backdrop-blur-sm transition-colors"
+        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 text-white/80 hover:text-primary transition-colors"
       >
-        <ChevronLeft className="w-6 h-6" />
+        <ChevronLeft className="w-8 h-8 md:w-10 md:h-10" />
       </button>
       <button
         onClick={next}
         aria-label="Siguiente"
-        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-primary text-white p-3 backdrop-blur-sm transition-colors"
+        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 text-white/80 hover:text-primary transition-colors"
       >
-        <ChevronRight className="w-6 h-6" />
+        <ChevronRight className="w-8 h-8 md:w-10 md:h-10" />
       </button>
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
