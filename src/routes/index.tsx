@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Zap, Leaf, ShieldCheck, Mail, Phone, MapPin } from "lucide-react";
+import { ArrowRight, Leaf, ShieldCheck, Mail, Phone, MapPin } from "lucide-react";
 import { HeroCarousel, type Slide } from "@/components/HeroCarousel";
 import { ContactForm } from "@/components/ContactForm";
 import { ModuleImage } from "@/components/ModuleImage";
@@ -65,7 +65,7 @@ const slides: Slide[] = [
 
 
 const features = [
-  { icon: Zap, title: "Rapidez", desc: "Reducimos hasta un 60% los tiempos de obra tradicionales." },
+  
   { icon: Leaf, title: "Sostenible", desc: "Construcción en seco con mínimo impacto ambiental." },
   { icon: ShieldCheck, title: "Calidad", desc: "Control riguroso en cada etapa del proceso." },
 ];
