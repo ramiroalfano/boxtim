@@ -65,7 +65,7 @@ const slides: Slide[] = [
 
 
 const features = [
-  { icon: Zap, title: "Rapidez", desc: "Reducimos hasta un 60% los tiempos de obra tradicionales." },
+  
   { icon: Leaf, title: "Sostenible", desc: "Construcción en seco con mínimo impacto ambiental." },
   { icon: ShieldCheck, title: "Calidad", desc: "Control riguroso en cada etapa del proceso." },
 ];
