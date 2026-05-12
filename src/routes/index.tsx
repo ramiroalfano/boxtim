@@ -102,6 +102,44 @@ function Index() {
         </div>
       </section>
 
+      {/* PROYECTOS */}
+      <section className="py-24 px-6 bg-card">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-end justify-between mb-12 gap-6 flex-wrap">
+            <div>
+              <p className="text-primary font-display uppercase tracking-widest text-sm mb-3">Portfolio</p>
+              <h2 className="font-display text-4xl md:text-6xl">Proyectos<br />realizados.</h2>
+            </div>
+            <Link to="/proyectos" className="inline-flex items-center gap-2 text-primary font-display uppercase tracking-wider text-sm hover:gap-3 transition-all">
+              Ver todos <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+          <Carousel opts={{ align: "start", loop: true }} className="w-full">
+            <CarouselContent className="-ml-4">
+              {proyectosHome.map((p) => (
+                <CarouselItem key={p.title} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                  <article className="group bg-background border border-border overflow-hidden hover:border-primary transition-all h-full" style={{ boxShadow: "var(--shadow-card)" }}>
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <ModuleImage src={p.img} alt={p.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    </div>
+                    <div className="p-6">
+                      <h3 className="font-display text-xl mb-2">{p.title}</h3>
+                      <p className="text-sm text-muted-foreground mb-4">{p.desc}</p>
+                      <div className="flex justify-between text-xs text-muted-foreground border-t border-border pt-3">
+                        <span>{p.loc}</span>
+                        <span className="text-primary font-medium">{p.area} · {p.year}</span>
+                      </div>
+                    </div>
+                  </article>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex -left-4" />
+            <CarouselNext className="hidden md:flex -right-4" />
+          </Carousel>
+        </div>
+      </section>
+
       {/* SOBRE / STATS */}
       <section className="py-24 px-6 bg-card">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
