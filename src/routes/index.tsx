@@ -4,10 +4,25 @@ import { HeroCarousel, type Slide } from "@/components/HeroCarousel";
 import { ContactForm } from "@/components/ContactForm";
 import { ModuleImage } from "@/components/ModuleImage";
 import { Toaster } from "@/components/ui/sonner";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import hero from "@/assets/box/hero.jpg";
 import showroom from "@/assets/box/showroom.jpeg";
 import p1 from "@/assets/box/p1.jpg";
+import boedo from "@/assets/box/boedocamp.png";
+import level from "@/assets/box/level.png";
+import lrc from "@/assets/box/lrcgym.jpeg";
+import bodega from "@/assets/box/expandible.jpeg";
+import cabana from "@/assets/box/cabana.jpeg";
 import { modulos } from "@/data/modulos";
+
+const proyectosHome = [
+  { img: p1, title: "Complejo de Oficinas Corporativas", loc: "Salta, Argentina", area: "400 m²", year: "2024", desc: "Oficinas corporativas con sala de reuniones, baño y laboratorio." },
+  { img: boedo, title: "BoedoCamp", loc: "Mendoza, Argentina", area: "120 m²", year: "2024", desc: "Ampliación y crecimiento del centro deportivo." },
+  { img: level, title: "Level Gym", loc: "Mendoza, Argentina", area: "250 m²", year: "2023", desc: "Gimnasio modular con instalaciones completas." },
+  { img: lrc, title: "Liceo Rugby Club Gym", loc: "Mendoza, Argentina", area: "80 m²", year: "2023", desc: "Ampliación del gimnasio del club." },
+  { img: bodega, title: "Bodega Vitivinícola", loc: "Mendoza, Argentina", area: "300 m²", year: "2023", desc: "Espacio modular para producción y degustación." },
+  { img: cabana, title: "Cabañas Vallecitos", loc: "Mendoza, Argentina", area: "150 m²", year: "2024", desc: "Cabañas turísticas en alta montaña." },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -84,6 +99,44 @@ function Index() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* PROYECTOS */}
+      <section className="py-24 px-6 bg-card">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-end justify-between mb-12 gap-6 flex-wrap">
+            <div>
+              <p className="text-primary font-display uppercase tracking-widest text-sm mb-3">Portfolio</p>
+              <h2 className="font-display text-4xl md:text-6xl">Proyectos<br />realizados.</h2>
+            </div>
+            <Link to="/proyectos" className="inline-flex items-center gap-2 text-primary font-display uppercase tracking-wider text-sm hover:gap-3 transition-all">
+              Ver todos <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+          <Carousel opts={{ align: "start", loop: true }} className="w-full">
+            <CarouselContent className="-ml-4">
+              {proyectosHome.map((p) => (
+                <CarouselItem key={p.title} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                  <article className="group bg-background border border-border overflow-hidden hover:border-primary transition-all h-full" style={{ boxShadow: "var(--shadow-card)" }}>
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <ModuleImage src={p.img} alt={p.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    </div>
+                    <div className="p-6">
+                      <h3 className="font-display text-xl mb-2">{p.title}</h3>
+                      <p className="text-sm text-muted-foreground mb-4">{p.desc}</p>
+                      <div className="flex justify-between text-xs text-muted-foreground border-t border-border pt-3">
+                        <span>{p.loc}</span>
+                        <span className="text-primary font-medium">{p.area} · {p.year}</span>
+                      </div>
+                    </div>
+                  </article>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex -left-4" />
+            <CarouselNext className="hidden md:flex -right-4" />
+          </Carousel>
         </div>
       </section>
 
