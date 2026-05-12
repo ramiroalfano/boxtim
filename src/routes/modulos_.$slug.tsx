@@ -2,6 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, Check, MessageCircle } from "lucide-react";
 import { useState } from "react";
 import { modulos, type Modulo } from "@/data/modulos";
+import { ModuleImage } from "@/components/ModuleImage";
 
 export const Route = createFileRoute("/modulos_/$slug")({
   component: ModuloDetail,
@@ -80,7 +81,7 @@ function ModuloDetail() {
           </div>
 
           <div className="space-y-6">
-            <img
+            <ModuleImage
               key={model.img}
               src={model.img}
               alt={model.name}
