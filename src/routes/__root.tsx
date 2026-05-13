@@ -123,6 +123,7 @@ function RootComponent() {
       </main>
       <Footer />
       <WhatsAppFloat />
+      <ScrollReveal />
     </QueryClientProvider>
   );
 }
