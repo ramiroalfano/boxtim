@@ -148,4 +148,27 @@
     font-family: 'Archivo Black', 'Inter', sans-serif;
     letter-spacing: -0.02em;
   }
+
+  /* Scroll reveal animations (applied globally by ScrollReveal) */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+      opacity 0.8s var(--transition-smooth),
+      transform 0.8s var(--transition-smooth);
+    will-change: opacity, transform;
+  }
+
+  .reveal-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
 }
