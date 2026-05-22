@@ -9,6 +9,9 @@ import level from "@/assets/box/level.png";
 import lrc from "@/assets/box/lrcgym.jpeg";
 import cabana from "@/assets/box/cabana.jpeg";
 import hero from "@/assets/box/hero.jpg";
+import oficinaChica from "@/assets/box/oficina-chica.png";
+import oficinaGrande from "@/assets/box/oficina-grande.png";
+import oficinaPersonalizada from "@/assets/box/oficina-personalizada.png";
 
 export type ModuloModel = {
   name: string;
@@ -41,19 +44,19 @@ export const modulos: Modulo[] = [
       {
         name: "Oficina Chica 15m²",
         desc: "Espacio para 1-2 personas, estandarizada y lista para instalar en obra o predio.",
-        img: oficina,
+        img: oficinaChica,
         highlights: ["1 a 2 puestos de trabajo", "Climatización incluida", "Iluminación LED", "Listo para usar"],
       },
       {
         name: "Oficina Grande 30m²",
         desc: "Capacidad para 3-4 personas con espacio para reuniones y guardado.",
-        img: level,
+        img: oficinaGrande,
         highlights: ["3 a 4 puestos", "Sala de reuniones", "Cableado de red", "Aislación reforzada"],
       },
       {
         name: "Oficina Personalizada",
         desc: "Diseño a medida según tus necesidades. Contanos tu proyecto y lo cotizamos.",
-        img: boedo,
+        img: oficinaPersonalizada,
         highlights: ["Layout a medida", "Terminaciones premium", "Branding integrado", "Asesoramiento técnico"],
       },
     ],
