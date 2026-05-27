@@ -79,11 +79,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "BOXtime — Construcción Modular en Mendoza" },
       { name: "description", content: "Construcciones modulares en seco con containers. Oficinas, viviendas y módulos sanitarios. Rápido, eficiente y sostenible." },
       { name: "author", content: "BOXtime" },
-      { property: "og:title", content: "BOXtime — Construcción Modular" },
-      { property: "og:description", content: "Soluciones innovadoras en construcción modular." },
+      { property: "og:title", content: "BOXtime — Construcción Modular en Mendoza" },
+      { property: "og:description", content: "Construcciones modulares en seco con containers. Oficinas, viviendas y módulos sanitarios. Rápido, eficiente y sostenible." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "BOXtime — Construcción Modular en Mendoza" },
+      { name: "twitter:description", content: "Construcciones modulares en seco con containers. Oficinas, viviendas y módulos sanitarios. Rápido, eficiente y sostenible." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e2b7a87d-56e4-4e4f-a276-5eeb04bcb238/id-preview-ad37db42--62d6e91d-03a4-4c88-b20f-954c040c65cd.lovable.app-1779118424747.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e2b7a87d-56e4-4e4f-a276-5eeb04bcb238/id-preview-ad37db42--62d6e91d-03a4-4c88-b20f-954c040c65cd.lovable.app-1779118424747.png" },
     ],
     links: [
       {
