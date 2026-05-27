@@ -139,7 +139,7 @@ export const modulos: Modulo[] = [
   {
     slug: "showroom",
     img: showroom,
-    title: "Showroom & Comercio",
+    title: "Urban Cubik",
     detailTitle: "Urban Cubik",
     desc: "Espacios de exhibición premium para marcas que buscan destacarse.",
     detailSubtitle: "Viviendas móviles con terminaciones de primera calidad",
@@ -168,8 +168,8 @@ export const modulos: Modulo[] = [
   {
     slug: "obradores",
     img: p1,
-    title: "Obradores & Logística",
-    detailTitle: "Obradores & Logística",
+    title: "Obras Civiles",
+    detailTitle: "Obras Civiles",
     desc: "Módulos resistentes para obras, campamentos y operaciones en campo.",
     detailSubtitle: "Soluciones robustas para obras, campamentos y operaciones en campo",
     features: ["Alta durabilidad", "Stock inmediato", "Fácil traslado", "Costo eficiente"],
