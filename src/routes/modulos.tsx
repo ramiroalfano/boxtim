@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Check, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import oficina from "@/assets/box/oficina.png";
 import vivienda from "@/assets/box/vivienda.png";
 import sanitario from "@/assets/box/sanitario.png";
@@ -33,22 +33,17 @@ function Modulos() {
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto space-y-16">
           {modulos.map((item, i) => (
-            <div key={item.slug} className={`grid md:grid-cols-2 gap-10 items-center ${i % 2 ? "md:[&>*:first-child]:order-2" : ""}`}>
+            <article key={item.slug} className={`grid md:grid-cols-2 gap-10 items-center rounded-2xl border border-border/70 bg-card/40 p-4 md:p-6 ${i % 2 ? "md:[&>*:first-child]:order-2" : ""}`}>
               <ModuleImage src={item.img} alt={item.title} loading="lazy" className="w-full aspect-[4/3] object-cover" style={{ boxShadow: "var(--shadow-card)" }} />
               <div>
                 <div className="text-primary font-display text-sm uppercase tracking-wider mb-2">0{i + 1}</div>
                 <h2 className="font-display text-4xl md:text-5xl mb-4">{item.title}</h2>
                 <p className="text-muted-foreground mb-6">{item.desc}</p>
-                <ul className="space-y-2 mb-8">
-                  {item.features.map((f) => (
-                    <li key={f} className="flex items-center gap-3"><Check className="w-5 h-5 text-primary"/> {f}</li>
-                  ))}
-                </ul>
                 <Link to="/modulos/$slug" params={{ slug: item.slug }} className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 font-display uppercase tracking-wider text-sm hover:bg-primary/90">
                   Ver más <ArrowRight className="w-4 h-4"/>
                 </Link>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </section>

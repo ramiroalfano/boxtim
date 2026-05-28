@@ -9,8 +9,7 @@ export function Footer() {
         <div className="md:col-span-2">
           <Logo />
           <p className="mt-4 text-muted-foreground max-w-sm">
-            Construcciones modulares en seco. Soluciones rápidas, eficientes y sostenibles para
-            cada necesidad.
+            Soluciones innovadoras en construcción modular con containers para proyectos comerciales, residenciales e industriales.
           </p>
         </div>
         <div>
@@ -26,8 +25,8 @@ export function Footer() {
         <div>
           <h4 className="font-display text-sm uppercase tracking-wider mb-4">Contacto</h4>
           <ul className="space-y-3 text-sm text-muted-foreground">
-            <li className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary"/> +54 261 555-0123</li>
-            <li className="flex items-center gap-2"><Mail className="w-4 h-4 text-primary"/> info@boxtime.com.ar</li>
+            <li className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary"/> +54 9 2615 43-9128</li>
+            <li className="flex items-center gap-2"><Mail className="w-4 h-4 text-primary"/> ventas@boxtimeweb.com</li>
             <li className="flex items-center gap-2"><MapPin className="w-4 h-4 text-primary"/> Mendoza, Argentina</li>
           </ul>
         </div>

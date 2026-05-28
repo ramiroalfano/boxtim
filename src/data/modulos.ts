@@ -3,6 +3,9 @@ import vivienda from "@/assets/box/vivienda.png";
 import sanitario from "@/assets/box/sanitario.png";
 import expandible from "@/assets/box/expandible.jpeg";
 import showroom from "@/assets/box/showroom.jpeg";
+import showroomBedroom from "@/assets/box/images/showroom-bedroom.png";
+import showroomKitchen from "@/assets/box/images/showroom-kitchen.jpeg";
+import showroomLiving from "@/assets/box/images/showroom-living.png";
 import p1 from "@/assets/box/p1.jpg";
 import boedo from "@/assets/box/boedocamp.png";
 import level from "@/assets/box/level.png";
@@ -12,6 +15,10 @@ import hero from "@/assets/box/hero.jpg";
 import oficinaChica from "@/assets/box/oficina-chica.png";
 import oficinaGrande from "@/assets/box/oficina-grande.png";
 import oficinaPersonalizada from "@/assets/box/oficina-personalizada.png";
+import obraImage from "@/assets/box/images/obra.jpg";
+import labImage from "@/assets/box/images/lab.jpeg";
+import constImage from "@/assets/box/images/const.jpeg";
+import habImage from "@/assets/box/images/hab.jpeg";
 
 export type ModuloModel = {
   name: string;
@@ -37,7 +44,7 @@ export const modulos: Modulo[] = [
     img: oficina,
     title: "Oficinas Modulares",
     detailTitle: "Oficinas Modulares",
-    desc: "Espacios corporativos modernos diseñados para productividad. Climatización, conexiones eléctricas y de red incluidas.",
+    desc: "Espacios de trabajo modernos y funcionales.",
     detailSubtitle: "Espacios de trabajo modernos y funcionales diseñados para maximizar la productividad",
     features: ["Aislación térmica y acústica", "Instalación eléctrica completa", "Climatización", "Acabados premium"],
     models: [
@@ -64,10 +71,10 @@ export const modulos: Modulo[] = [
   {
     slug: "vivienda-compacta",
     img: vivienda,
-    title: "Viviendas Compactas",
+    title: "Alquiler",
     detailTitle: "Alquiler",
-    desc: "Hogares completos listos para habitar. Desde monoambientes hasta casas familiares expandibles.",
-    detailSubtitle: "Hogares completos listos para habitar con todos los servicios incluidos",
+    desc: "Espacios completos listos para habitar. Desde monoambientes hasta casas familiares expandibles.",
+    detailSubtitle: "Espacios completos listos para habitar con todos los servicios incluidos",
     features: ["Cocina y baño equipados", "Aislación de alta performance", "Carpinterías de PVC", "Lista para habitar"],
     models: [
       {
@@ -79,13 +86,13 @@ export const modulos: Modulo[] = [
       {
         name: "Laboratorios",
         desc: "Dormitorio separado, cocina equipada y baño completo.",
-        img: vivienda,
+        img: labImage,
         highlights: ["Dormitorio independiente", "Cocina equipada", "Baño completo", "Aislación premium"],
       },
       {
         name: "Pañoles obrador",
         desc: "Para construcciones, estandarizados y de alta resistencia.",
-        img: p1,
+        img: obraImage,
         highlights: ["Alta resistencia", "Cerraduras reforzadas", "Stock inmediato", "Fácil traslado"],
       },
       {
@@ -116,22 +123,22 @@ export const modulos: Modulo[] = [
   {
     slug: "vivienda-expandible",
     img: expandible,
-    title: "Vivienda Expandible",
+    title: "Habitacional y Construcción",
     detailTitle: "Habitacional y Construcción",
-    desc: "Diseños modulares que crecen con tu familia. Sumá módulos cuando los necesites.",
+    desc: "Diseños modulares que crecen contigo.",
     detailSubtitle: "Diseños modulares que crecen junto a tus necesidades",
     features: ["Sistema escalable", "Conexión entre módulos", "Diseño unificado", "Habilitación rápida"],
     models: [
       {
         name: "Modelo Comercial",
         desc: "Estandarizado, listo para instalar.",
-        img: expandible,
+        img: constImage,
         highlights: ["Entrega rápida", "Sistema escalable", "Conexión entre módulos", "Diseño unificado"],
       },
       {
         name: "Modelo Personalizado",
         desc: "Consultá para personalización según tus necesidades.",
-        img: cabana,
+        img: habImage,
         highlights: ["Layout a medida", "Terminaciones premium", "Asesoramiento", "Diseño exclusivo"],
       },
     ],
@@ -141,26 +148,26 @@ export const modulos: Modulo[] = [
     img: showroom,
     title: "Urban Cubik",
     detailTitle: "Urban Cubik",
-    desc: "Espacios de exhibición premium para marcas que buscan destacarse.",
+    desc: "Espacios premium para viviendas de primera calidad.",
     detailSubtitle: "Viviendas móviles con terminaciones de primera calidad",
     features: ["Vidrieras amplias", "Iluminación LED", "Diseño personalizable", "Movilidad total"],
     models: [
       {
         name: "Interiores comedor",
         desc: "Superficie cubierta de 36m² con terminaciones de primera.",
-        img: showroom,
+        img: showroomLiving,
         highlights: ["36m² cubiertos", "Iluminación LED", "Pisos premium", "Diseño moderno"],
       },
       {
         name: "Interior cocina",
         desc: "Cocina equipada con terminaciones de primera calidad.",
-        img: hero,
+        img: showroomKitchen,
         highlights: ["Bajo mesada", "Mesada de cuarzo", "Electrodomésticos", "Storage integrado"],
       },
       {
         name: "Interior dormitorio",
         desc: "Diseño de vanguardia para descanso premium.",
-        img: lrc,
+        img: showroomBedroom,
         highlights: ["Aislación acústica", "Climatización", "Iluminación cálida", "Placard incluido"],
       },
     ],

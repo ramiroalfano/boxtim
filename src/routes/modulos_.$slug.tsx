@@ -118,7 +118,7 @@ function ModuloDetail() {
                 Cotizar este modelo <ArrowRight className="w-4 h-4" />
               </Link>
               <a
-                href={`https://wa.me/5492615550123?text=${encodeURIComponent(`Hola! Quiero consultar por el módulo "${m.detailTitle}" - modelo "${model.name}".`)}`}
+                href={`https://wa.me/5492615439128?text=${encodeURIComponent(`Hola! Quiero consultar por el módulo "${m.detailTitle}" - modelo "${model.name}".`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-3 inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 font-display uppercase tracking-wider text-sm hover:bg-[#1ebe57] transition w-full justify-center"

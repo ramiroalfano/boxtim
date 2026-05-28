@@ -1,7 +1,7 @@
 import { MessageCircle } from "lucide-react";
 
 export function WhatsAppFloat() {
-  const url = `https://wa.me/5492615550123?text=${encodeURIComponent(
+  const url = `https://wa.me/5492615439128?text=${encodeURIComponent(
     "Hola! Quiero hacer una consulta sobre los módulos de BOXtime."
   )}`;
   return (

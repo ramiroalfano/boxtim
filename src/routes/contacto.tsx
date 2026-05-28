@@ -45,12 +45,12 @@ function Contacto() {
             <div>
               <Phone className="w-6 h-6 text-primary mb-2"/>
               <div className="font-display text-lg">Teléfono</div>
-              <div className="text-muted-foreground">+54 261 555-0123</div>
+              <div className="text-muted-foreground">+54 9 2615 43-9128</div>
             </div>
             <div>
               <Mail className="w-6 h-6 text-primary mb-2"/>
               <div className="font-display text-lg">Email</div>
-              <div className="text-muted-foreground">info@boxtime.com.ar</div>
+              <div className="text-muted-foreground">ventas@boxtimeweb.com</div>
             </div>
             <div>
               <MapPin className="w-6 h-6 text-primary mb-2"/>
